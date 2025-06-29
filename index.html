@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2>Shodai</h2>
+      <a href="#">Dashboard</a>
+      <a href="#">Orders</a>
+      <a href="#">Customers</a>
+      <a href="#">Messages</a>
+      <br />
+      <strong>TOOLS</strong>
+      <a href="#" class="active">Products</a>
+      <a href="#">Integrations</a>
+      <a href="#">Analytics</a>
+      <a href="#">Invoice</a>
+      <a href="#">Discount</a>
+      <br />
+      <strong>SETTINGS</strong>
+      <a href="#">Setting</a>
+      <a href="#">Security</a>
+      <a href="#">Help</a>
+    </div>
+
+    <div class="main">
+      <div class="topbar">
+        <div class="search">
+          <input type="text" placeholder="Search product..." />
+        </div>
+        <button class="add-btn">+ Add Product</button>
+      </div>
+
+      <div class="filters">
+        <select>
+          <option>Jackets (132)</option>
+        </select>
+        <select>
+          <option>All Status</option>
+        </select>
+        <select>
+          <option>$50 - $100</option>
+        </select>
+        <select>
+          <option>All Store</option>
+        </select>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Product Name</th>
+            <th>Purchase Unit Price</th>
+            <th>Products</th>
+            <th>Views</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td-span">
+              <img
+                src="https://i.pinimg.com/736x/89/22/9d/89229da38197d08d3b1cfb3f312df57d.jpg"
+                alt=""
+              />
+              <span>Gabriela Cashmere Blazer</span>
+            </td>
+            <td>$113.99</td>
+            <td>1113</td>
+            <td>14,012</td>
+            <td><button class="status">Active</button></td>
+            <td><button class="edit-btn">Edit</button></td>
+          </tr>
+          <tr>
+            <td class="td-span">
+              <img
+                src="https://i.pinimg.com/736x/89/22/9d/89229da38197d08d3b1cfb3f312df57d.jpg"
+                alt=""
+              />
+              <span>Loewe Blend Jacket - Blue</span>
+            </td>
+            <td>$113.99</td>
+            <td>721</td>
+            <td>13,212</td>
+            <td><button class="status">Active</button></td>
+            <td><button class="edit-btn">Edit</button></td>
+          </tr>
+          <!-- Thêm các dòng khác tương tự -->
+        </tbody>
+      </table>
+
+      <div class="pagination">
+        <button>&laquo;</button>
+        <button>1</button>
+        <button>2</button>
+        <button class="active">3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>&raquo;</button>
+      </div>
+    </div>
+  </body>
+</html>
