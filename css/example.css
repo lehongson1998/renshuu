@@ -1,11 +1,117 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,300&display=swap");
 
-.back-ground {
-  background-image: url("https://images.unsplash.com/photo-1502085671122-2d218cd434e6?q=80&w=1226&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+:root {
+  --primary-color: #2cb6f7;
+  --secondary-color: #c95eb4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.text {
+  line-height: 1.5;
+  text-align: center;
+  text-align: justify;
+  padding: 1rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.image {
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+  object-position: top;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.pseudo {
+  display: block;
+  padding: 1rem;
+  max-width: 10rem;
+  background-color: rgb(185, 174, 174);
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.pseudo:hover {
+  color: black;
+  background-image: linear-gradient(
+    to right bottom,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+}
+
+.pseudo:active {
+  color: red;
+}
+
+.pseudo:visited {
+  color: green;
+}
+
+.text-title {
+  text-align: center;
+}
+
+.text-demo {
+  display: inline-block;
+  font-size: 10rem;
+  margin-top: 2rem;
+  color: #2cb6f7;
+  text-shadow: 10px 6px 0px #c95eb4;
+}
+
+@supports (-webkit-background-clip: text) {
+  .text-demo {
+    background-image: linear-gradient(
+      to right bottom,
+      var(--primary-color),
+      var(--secondary-color)
+    );
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+
+.boxed {
   width: 100vw;
   height: 100vh;
-  background-position: center center;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(44, 182, 247, 0.8),
+      rgba(201, 94, 180, 0.7)
+    ),
+    url("https://plus.unsplash.com/premium_photo-1693236731045-5148457c0491?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
-  background-repeat: no-repeat;
-  /* background-attachment: fixed; */
+}
+
+.shadow {
+  width: 20rem;
+  height: 20rem;
+  background-color: black;
+  margin: 5rem auto;
+  box-shadow: 5px 5px 10px red;
 }
