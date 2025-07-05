@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: white;
+  width: 100%;
+  height: 10vh;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+}
+
+.container {
+  text-align: center;
+}
+
+.effect {
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-align: center;
+  background-color: white;
+  border: 1px solid orange;
+  margin: 1rem;
+  transition: color 0.25s linear;
+  position: relative;
+  z-index: 1;
+}
+
+.effect::before,
+.effect::after {
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: orange;
+  z-index: -1;
+  transition: all 0.5s linear;
+}
+
+.effect:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+.effect:hover {
+  color: white;
+}
+
+.effect:first-child::before {
+  width: 100%;
+  height: 0;
+}
+
+.effect:first-child:hover::before {
+  height: 100%;
+}
+
+.effect:nth-child(2)::before {
+  width: 0;
+  height: 100%;
+}
+
+.effect:nth-child(2):hover::before {
+  width: 100%;
+}
+
+.effect:nth-last-child(2)::before {
+  right: 0;
+  left: auto;
+  width: 0;
+  height: 100%;
+  background-image: linear-gradient(to right, #cf37a9, #5805e1);
+}
+
+.effect:nth-last-child(2)::after {
+  left: 0;
+  right: auto;
+  width: 0;
+  height: 100%;
+  background-image: linear-gradient(to left, #cf37a9, #5805e1);
+}
+
+.effect:nth-last-child(2):hover::before {
+  width: 50%;
+}
+
+.effect:nth-last-child(2):hover::after {
+  width: 50%;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.boxed {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-image: linear-gradient(to right, #cf37a9, #5805e1);
+  border-radius: 50%;
+  /* animation-name: move;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-fill-mode: forwards; */
+  animation: move 2s forwards infinite alternate
+    cubic-bezier(0.075, 0.82, 0.165, 1) 5s;
+}
+
+@keyframes move {
+  from {
+    transform: translateX(-20rem);
+  }
+  to {
+    transform: translateX(20rem);
+  }
+}
+
+.circle-loading {
+  margin: 5rem auto;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: violet;
+  position: relative;
+  /* animation: fade 1s forwards infinite linear; */
+}
+
+.circle-loading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: inherit;
+  animation: fade 1s forwards infinite linear;
+}
+
+@keyframes fade {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.circles {
+  text-align: center;
+  margin: 5rem;
+  animation: loading 1s infinite;
+}
+
+.circle-item {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid violet;
+  border-radius: 50%;
+  margin: 0 0.2rem;
+}
+
+.circle-item:first-child {
+  border-color: cyan;
+}
+
+@keyframes loading {
+  50% {
+    transform: rotate(200deg);
+  }
+  75% {
+    transform: rotate(160deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.circles2 {
+  margin: 0 auto;
+  width: 5rem;
+  height: 5rem;
+  border: 5px solid #b4b4b4;
+  border-radius: 50%;
+  position: relative;
+  animation: spin 2s infinite linear;
+}
+
+.circles2::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-left: 5px solid rgba(130, 125, 125, 0.912);
+  border-right: 5px solid #b4b4b4;
+  border-bottom: 5px solid #b4b4b4;
+  border-top: 5px solid #b4b4b4;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-5px, -5px);
+}
+
+@keyframes spin {
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(160deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

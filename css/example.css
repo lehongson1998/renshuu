@@ -19,6 +19,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
   font-weight: 300;
+  padding-top: 3rem;
 }
 
 .text {
@@ -44,7 +45,7 @@ img {
 
 .pseudo {
   display: block;
-  padding: 1rem;
+  padding: 0, 5rem 1rem;
   max-width: 10rem;
   background-color: rgb(185, 174, 174);
   text-decoration: none;
@@ -96,7 +97,7 @@ img {
   }
 }
 
-.boxed {
+/* .boxed {
   width: 100vw;
   height: 100vh;
   background-image: linear-gradient(
@@ -106,7 +107,7 @@ img {
     ),
     url("https://plus.unsplash.com/premium_photo-1693236731045-5148457c0491?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
-}
+} */
 
 .shadow {
   width: 20rem;
@@ -114,4 +115,97 @@ img {
   background-color: black;
   margin: 5rem auto;
   box-shadow: 5px 5px 10px red;
+}
+
+.intro-section {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(44, 182, 247, 0.8),
+      rgba(201, 94, 180, 0.7)
+    ),
+    url("https://images.unsplash.com/photo-1623169103879-3e84fb4a6db3?q=80&w=985&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+}
+
+.text-gradient {
+  display: inline-block;
+  font-size: 10rem;
+  font-weight: bold;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(to right bottom, #d685af, #5306da);
+  text-align: center;
+}
+
+.text {
+  text-align: center;
+}
+
+.btn-group {
+  text-align: center;
+  background-color: rgb(202, 226, 225);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.btn {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  border-radius: 5px;
+  color: white;
+  margin: 1rem;
+}
+
+.btn-green {
+  background-image: linear-gradient(to right, #00efa9, #01d3c4);
+  box-shadow: 0 0 10px 0 rgba(1, 211, 197, 0.516);
+}
+
+.btn-primary {
+  background-image: linear-gradient(to right, #0c5ac0, #0936da);
+  box-shadow: 0 0 10px 0 rgba(52, 75, 224, 0.516);
+}
+
+.btn-secondary {
+  background-image: linear-gradient(to right, #e4c287, #dc5f63);
+  box-shadow: 0 0 10px 0 rgba(223, 50, 73, 0.516);
+}
+
+.btn-error {
+  background-image: linear-gradient(to right, #d98a93, #f10505);
+  box-shadow: 0 0 10px 0 rgba(215, 30, 42, 0.516);
+}
+
+.btn-warning {
+  background-image: linear-gradient(to right, #d0b9d7, #c503f5);
+  box-shadow: 0 0 10px 0 rgba(243, 2, 215, 0.516);
+}
+
+.btn-orange {
+  background-image: linear-gradient(to right, #e1bf94, #f85c01);
+  box-shadow: 0 0 10px 0 rgba(237, 111, 1, 0.516);
+}
+
+.wrap {
+  width: 100%;
+  height: 50rem;
+  background-color: black;
+  position: relative;
+}
+
+.boxed {
+  width: 5rem;
+  height: 5rem;
+  background-color: #c95eb4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
